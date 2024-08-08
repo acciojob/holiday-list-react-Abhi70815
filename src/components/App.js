@@ -1,5 +1,4 @@
-
-import React, { useState, useEffect } from "react";
+import React from 'react';
 import './../styles/App.css';
 
 const App = () => {
@@ -31,13 +30,20 @@ const App = () => {
     { name: 'Mussoorie', country: 'India' },
     { name: 'Mount Abu', country: 'India' },
     { name: 'Tirupati', country: 'India' },
-    ]
+    ];
+    let indianCity= cityList.filter((elem)=>elem.country==='India');
     
   return (
     <div id="main">
-               {/* Do not remove the main div */}
+           <ul>
+        {indianCity.map((elem, index) => (
+          <li key={`location${index}`}>{elem.name}</li>
+        ))}
+      </ul>
+               
+               
     </div>
-  )
-}
+  );
+};
 
 export default App
