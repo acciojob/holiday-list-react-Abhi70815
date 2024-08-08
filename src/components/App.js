@@ -35,11 +35,11 @@ const App = () => {
     
   return (
     <div id="main">
-           <ul>
+           <ol>
         {indianCity.map((elem, index) => (
           <li key={`location${index}`}>{elem.name}</li>
         ))}
-      </ul>
+      </ol>
                
                
     </div>
